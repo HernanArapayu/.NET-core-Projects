@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Usuario;
+
+<div class="container">
+    <form asp-action="enviarDatos" asp-controller="Home" class="form" method="POST">
+        <div class="row">
+            <div class="col form-group">
+                <label for="">Nombre<input type="text" asp-for="Nombre" class="form-control"></label>
+                <span asp-validation-for="Nombre"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <label for="">Apellido<input type="text" asp-for="Apellido" class="form-control"></label>
+                <span asp-validation-for="Apellido"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <label for="">Edad<input type="text" asp-for="Edad" class="form-control"></label>
+                <span asp-validation-for="Edad"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <label for="">Email<input type="text" asp-for="Email" class="form-control"></label>
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group">
+                <input type="submit" value="enviar" class="btn btn-primary ">
+            </div>
+        </div>
+    </form>
+</div>
